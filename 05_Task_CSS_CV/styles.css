@@ -1,0 +1,70 @@
+html,
+body {
+    width: 100%;
+    margin: 0;
+    font-family: "serif", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+.head {
+    text-align: center;
+}
+
+.name {
+    color: black;
+    font-weight: bolder;
+}
+
+header {
+    margin-top: 20px;
+}
+
+.info {
+    text-align: right;
+}
+
+.header-hr {
+    background-color: black;
+    height: 5px;
+}
+
+h2 {
+    color: darkgreen;
+    font-weight: normal;
+}
+
+table {
+    padding: 0 30px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table td {
+    width: 100%;
+}
+
+section td:first-of-type {
+    width: 20%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: green;
+}
