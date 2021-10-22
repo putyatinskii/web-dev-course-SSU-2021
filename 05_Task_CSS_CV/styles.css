@@ -52,8 +52,11 @@ section td:first-of-type {
 }
 
 ul {
-    list-style: none;
     padding: 0;
+}
+
+.ul-without-list {
+    list-style: none;
 }
 
 a {
