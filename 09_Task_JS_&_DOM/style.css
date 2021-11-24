@@ -9,7 +9,7 @@ body {
 .task {
     border-bottom-style: solid;
     padding-bottom:10px;
-    width: 100%;
+    word-wrap: break-word;
 }
 
 #getTable {
