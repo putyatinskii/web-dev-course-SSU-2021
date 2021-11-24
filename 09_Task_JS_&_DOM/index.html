@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>09_Task_JS_&_DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/getFormula.js"></script>
+    <script src="scripts/createTable.js"></script>
+    <script src="scripts/generatePassword.js"></script>
+</head>
+
+<body>
+    <div class = "task">
+        <h2>Get formula</h2>
+        <form>
+            <input type="number" placeholder="Enter degree" id="getFormula"/>
+            <input type="button" value="Get formula" onclick="writeFormula()"></input>
+            <input type="button" value="Reset" onclick="resetFormula()"></input>
+           <p>formula:</p>
+            <div id="writeFormula"></div>
+        </form>
+    </div>
+
+    <div class = "task">
+        <h2>Generate password</h2>
+        <form>
+           <input type="button" value="Generate password" onclick="getPassword()"></input>
+           <input type="button" value="Reset" onclick="resetPassword()"></input>
+            <p>Your password:</p>
+            <div id="generatePassword"></div>
+        </form>
+    </div>
+
+    <div class = "task">
+        <h2>From String To Table</h2>
+        <form>
+            <p><input type="number" placeholder="Enter length" id="getLength"/></p>
+            <p><input type="number" placeholder="Enter width" id="getWidth"/></p>
+            <p><input type="text" placeholder="Enter message" id="getMessage"/></p>
+            <p><input type="button" value="Create table" onclick="printTable()"></input></p>
+            <p><input type="button" value="Reset" onclick="resetTable()"></input></p>
+            <p>Table:</p>
+            <div id="getTable"></div>
+        </form>
+    </div>
+</body>
+
+</html>
