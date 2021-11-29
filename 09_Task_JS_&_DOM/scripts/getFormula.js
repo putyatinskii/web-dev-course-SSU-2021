@@ -11,8 +11,10 @@ function resetFormula() {
 function getFormula(n) {
     var formula = "";
 	var isNegativeDegree = false;
-	if(!Number.isInteger(n) || n < -200 || n > 200)
-		return "Invalid input";
+	if(!Number.isInteger(n))
+	return "Поле не может быть пустым";
+	if(n < -200 || n > 200)
+		return "Число должно быть в диапазоне от -200 до 200";
 	if (n == 0)
 	    return "1"
 	else if (n < 0) {

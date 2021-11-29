@@ -14,13 +14,12 @@ function resetTable() {
 }
 
 function getTable(m,n,message){
-    var errorMessage = "Invalid input";
     if(!Number.isInteger(n) || !Number.isInteger(m))
-        return errorMessage;
+        return "Ширина и длина не могут быть пустыми";
     if(m <= 0 || n <= 0)
-        return errorMessage
+        return "Числа должы быть положительными";
     if(m*n < message.length)
-        return errorMessage;
+        return "Введенное сообщение не уместится в таблицу размера " + n + " на " + m;
     var result = ""
     var lettersPrintedCnt = 0
     for (var row = 0; row < m; row++) {

@@ -12,6 +12,8 @@
 <body>
     <div class = "task">
         <h2>Get formula</h2>
+        <p>Введите целое число в диапазоне от -200 до 200. Вам вернется формула степени суммы для этого числа!</p>
+        <p><em>(При вводе дробного числа выведется формула для целой части числа.)</em></p>
         <form>
             <input type="number" placeholder="Enter degree" id="getFormula"/>
             <input type="button" value="Get formula" onclick="writeFormula()"></input>
@@ -23,6 +25,7 @@
 
     <div class = "task">
         <h2>Generate password</h2>
+        <p>При нажатие на кнопку будет сгенерирован случайный пароль</p>
         <form>
            <input type="button" value="Generate password" onclick="getPassword()"></input>
            <input type="button" value="Reset" onclick="resetPassword()"></input>
@@ -33,6 +36,8 @@
 
     <div class = "task">
         <h2>From String To Table</h2>
+        <p>Введите размеры таблицы и сообщение, которое необходимо представить в виде таблицы</p>
+        <p><em>(При вводе дробного значения ширины или длины будет взята целая часть от числа)</em></p>
         <form>
             <p><input type="number" placeholder="Enter length" id="getLength"/></p>
             <p><input type="number" placeholder="Enter width" id="getWidth"/></p>
