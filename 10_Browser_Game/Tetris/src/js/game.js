@@ -2,28 +2,7 @@ export default class Game {
     score = 0;
     lines = 0;
     level = 0;
-    playField = [
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
-    ];
+    playField = this.createPlayField();
     activePiece = {
         x: 0,
         y: 0,
@@ -34,6 +13,45 @@ export default class Game {
         ]   
     };
 
+
+    getState() {
+        const playField = this.createPlayField();
+        const {y: pieceY, x: pieceX, blocks} = this.activePiece;
+
+        for (let y = 0; y < this.playField.length; y++) {
+            playField[y] = [];
+
+            for (let x = 0; x < this.playField[y].length; x++) {
+                playField[y][x] = this.playField[y][x]; 
+            }
+        }
+
+        for (let y = 0; y < blocks.length; y++) {
+            for (let x = 0; x < blocks[y].length; x++) {
+                if(blocks[y][x]) {
+                    playField[pieceY + y][pieceX + x] = blocks[y][x];
+                }    
+            }
+        }
+
+        return {
+            playField
+        };
+    }
+
+    createPlayField() {
+        const playField = [];
+
+        for (let y = 0; y < 20; y++) {
+            playField[y] = [];
+
+            for (let x = 0; x < 10; x++) {
+                playField[y][x] = 0;
+            } 
+        }
+
+        return playField;
+    }
 
     movePieceLeft() {
         this.activePiece.x -= 1;
