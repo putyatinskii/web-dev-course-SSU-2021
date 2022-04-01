@@ -1,6 +1,9 @@
 import '../scss/app.scss';
+import Game from '../js/game';
 
-/* Your JS Code goes here */
 
-/* Demo JS */
-import './demo.js';
+const game = new Game();
+
+window.game = game;
+
+console.log(game);
