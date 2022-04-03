@@ -37,6 +37,10 @@ export default class Game {
         }
 
         return {
+            level: this.level,
+            score: this.score,
+            lines: this.lines,
+            nextPiece: this.nextPiece,
             playField
         };
     }
